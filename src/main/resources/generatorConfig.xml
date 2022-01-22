@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="/root/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.27/f1da9f10a3de6348725a413304aab6d0aa04f923/mysql-connector-java-8.0.27.jar" />
+    <context id="dobeats" targetRuntime="MyBatis3Kotlin">
+        <property name="autoDelimitKeyWords" value="true" />
+        <property name="beginningDelimiter" value="`" />
+        <property name="endingDelimiter" value="`" />
+        <jdbcConnection
+                connectionURL="jdbc:mysql://localhost:3306/dobeats"
+                driverClass="com.mysql.jdbc.Driver"
+                password="password"
+                userId="root">
+            <property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator
+                targetPackage="net.dobeats.wellness.api.domain.model"
+                targetProject="src/main/kotlin">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <javaClientGenerator
+                targetPackage="net.dobeats.wellness.api.domain.repository"
+                targetProject="src/main/kotlin">
+        </javaClientGenerator>
+        <table tableName="%"/>
+    </context>
+</generatorConfiguration>

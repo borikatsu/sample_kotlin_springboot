@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dobeats?characterEncoding=utf8
+    username: root
+    password: password
+    driverClassName: com.mysql.jdbc.Driver
+    initialization-mode: always
+  jackson:
+    property-naming-strategy: SNAKE_CASE
